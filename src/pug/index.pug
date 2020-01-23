@@ -1,0 +1,69 @@
+extends templates/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+block content
+	section.section-banner
+		.container.text-center
+			h1.b Мы – лучшая компания в Мире
+			.banner-subtitle Предоставляем любые услуги в любом бизнесе в день обращения
+			.btn.btn-lg.btn-primary Заказать
+	section.section-cases.bg-secondary
+		.container
+			.section-title
+				h2 Кейсы
+				.swiper-nav.dark-50
+					.swiper-button-prev.arrow-link
+						+icon('arrow')
+					.swiper-button-next.arrow-link
+						+icon('arrow')
+		.container.p-0
+			.swiper-container.py-3
+				.swiper-wrapper
+					//- .swiper-slide
+					//- 	.card
+					//- 		.card__img-container
+					//- 			+pic('card__img','content','case','jpg')
+					//- 		.card__date 13 августа
+					//- 		.card__title Минтруд предложил обсудить сокращение рабочей недели до четырех дней
+					//- 		.card__footer
+					//- 			a.card__link.stretched-link.arrow-link(href="") Читать полностью
+					//- 				+icon('arrow')
+					//- .swiper-slide
+					//- 	.card
+					//- 		.card__img-container
+					//- 			+pic('card__img','content','case','jpg')
+					//- 		.card__date 13 августа
+					//- 		.card__title Минтруд предложил обсудить сокращение рабочей недели до четырех дней
+					//- 		.card__footer
+					//- 			a.card__link.stretched-link.arrow-link(href="") Читать полностью
+					//- 				+icon('arrow')
+					//- .swiper-slide
+					//- 	.card
+					//- 		.card__img-container
+					//- 			+pic('card__img','content','case','jpg')
+					//- 		.card__date 13 августа
+					//- 		.card__title Минтруд предложил обсудить сокращение рабочей недели до четырех дней
+					//- 		.card__footer
+					//- 			a.card__link.stretched-link.arrow-link(href="") Читать полностью
+					//- 				+icon('arrow')
+
+
+
+
+	template#card
+		.swiper-slide
+			.card
+				img.card__img
+				.card__content
+					.card__body
+						.card__date.dark-50
+						.card__title
+						.card__text
+					.card__footer
+						a.card__link.stretched-link.arrow-link(href="") Читать полностью
+							+icon('arrow')
+
+
+

@@ -1,0 +1,132 @@
+@import start
+
+.section-banner
+	background: url('/img/content/banner.jpg') no-repeat center/cover
+	height: 496px
+	display: flex
+	align-items: center
+	padding-top: calc(2rem + 2.5vw + 70px)
+.banner-subtitle
+	font-size: 18px
+	margin-bottom: 62px
+.swiper-container
+	margin-left: 15px
+	padding-right: 60px
+.swiper-slide
+	height: auto
+
+.card
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	font-size: 14px
+	background-color: #fff
+	border-radius: 10px
+	box-shadow: 0 2px 14px 0 rgba(15, 33, 53, 0.11)
+	overflow: hidden
+	&__body
+		padding: 20px 25px 25px
+	&__img
+		width: 100%
+		backface-visibility: hidden
+		transform-origin: bottom
+		transition: .5s ease
+	&__date
+		margin-bottom: 10px
+	&__title
+		font-size: 16px
+		font-weight: bold
+		margin-bottom: 12px
+	&__footer
+		font-weight: 500
+		color: #7f8d9c
+		padding: 17px 25px 22px
+		border-top: 1px solid rgba(15, 33, 53, 0.11)
+	&__content
+		height: 100%
+		display: flex
+		flex-direction: column
+	&__body
+		flex: 1 1 100%
+	&:hover
+		.card__img
+			transform: scale(1.1)
+.subscribe-title
+	font-size: 22px
+	margin-bottom: 19px
+.subscribe-subtitle
+	margin-bottom: 29px
+.subscribe-input.is-active
+	border: 1px solid $accent
+.subscribe-input
+	height: 44px
+	border: 1px solid $dark-50
+	border-radius: 8px
+	padding-left: 20px
+	margin-bottom: 27px
+	&:focus, &:hover
+		border: 1px solid $accent
+.checkbox-container
+	margin-bottom: 32px
+.label-cbx
+	user-select: none
+	cursor: pointer
+	margin-bottom: 0
+	input:checked
+		& + .checkbox
+			border-color: $accent
+			svg
+				path
+					fill: $accent
+				polyline
+					stroke-dashoffset: 0
+	&:hover
+		.checkbox
+			svg
+				path
+					stroke-dashoffset: 0
+
+	.checkbox
+		position: relative
+		top: 2px
+		float: left
+		margin-right: 8px
+		width: 20px
+		height: 20px
+		border: 2px solid #C8CCD4
+		border-radius: 3px
+		svg
+			position: absolute
+			top: -2px
+			left: -2px
+			path
+				fill: none
+				stroke: $accent
+				stroke-width: 2
+				stroke-linecap: round
+				stroke-linejoin: round
+				stroke-dasharray: 71px
+				stroke-dashoffset: 71px
+				transition: all .6s ease
+			polyline
+				fill: none
+				stroke: #FFF
+				stroke-width: 2
+				stroke-linecap: round
+				stroke-linejoin: round
+				stroke-dasharray: 18px
+				stroke-dashoffset: 18px
+				transition: all .3s ease
+
+	> span
+		pointer-events: none
+		vertical-align: middle
+
+.invisible
+	position: absolute
+	z-index: -1
+	width: 0
+	height: 0
+	opacity: 0
+@import media

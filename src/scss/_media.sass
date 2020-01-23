@@ -1,0 +1,110 @@
+@import "vars"
+
+/*==========  Internet explorer  ==========*/
+
+@media all and (-ms-high-contrast:none)
+
+
+/*==========  FireFox  ==========*/
+
+@-moz-document url-prefix()
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1400px
++media-breakpoint-down(xl)
+
+// ≥1200px
++media-breakpoint-down(lg)
+  section
+    padding: calc(2rem + 2.5vw) 0
+// ≥992px
++media-breakpoint-down(md)
+  body.is-active
+    overflow: hidden
+    .nav
+      pointer-events: all
+      height: 100vh
+      opacity: 1
+      transition: height .3s ease, opacity .1s
+      ul>*
+        opacity: 1
+        transform: translate(0)
+      ul li:nth-child(1)
+        transition-delay: .3s
+      ul li:nth-child(2)
+        transition-delay: .4s
+      ul li:nth-child(3)
+        transition-delay: .5s
+      .btn
+        opacity: 1
+        transform: translate(0)
+        transition-delay: .6s
+  .nav
+    font-weight: bold
+    height: auto
+    position: absolute
+    background-color: $dark
+    top: 100%
+    width: 100%
+    left: 0
+    z-index: 50
+    border-top: 1px solid rgba(255,255,255, .7)
+    padding-top: 10px
+    height: 0
+    pointer-events: none
+    opacity: 0
+    ul>*
+      opacity: 0
+      transform: translate(30px)
+      transition: .5s ease
+    .btn
+      opacity: 0
+      transform: translate(30px)
+      transition: .5s ease
+    ul
+      height: auto
+      flex-direction: column
+      align-items: flex-start
+      li
+        height: auto
+        margin: 25px 0
+        font-size: 24px
+        &:before
+          bottom: -15px
+// ≥768px
++media-breakpoint-down(sm)
+// ≥576px
++media-breakpoint-down(xs)
+/*==========  mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+  .swiper-container
+    width: calc(100% + ((100vw - 768px) / 2))
+// ≤992px
++media-breakpoint-up(lg)
+  h1
+    font-size: 42px
+  header
+    height: 100px
+  .section-banner
+    height: 536px
+    padding-top: calc(2rem + 2.5vw + 100px)
+  .banner-subtitle
+    font-size: 28px
+    max-width: 700px
+    margin: auto
+    line-height: normal
+    margin-bottom: 32px
+  header.fixed
+    height: 70px
+  .swiper-container
+    padding-right: 0
+    width: 100%
+// ≤1200px
++media-breakpoint-up(xl)

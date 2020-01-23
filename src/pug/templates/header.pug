@@ -1,0 +1,18 @@
+header.header.bg-dark
+	.container.d-flex.align-items-center.justify-content-between.h-100
+		.header-block--left.d-flex.align-items-center.justify-content-between.w-100.h-100
+			a.logo(href="/")
+				+icon('logo')
+				+icon('logo-small')
+			.nav.text-white.d-lg-block
+				.container.p-lg-0.h-100
+					ul.not-decoration.d-flex
+						li: a.link(href="") О компании
+						li: a.link(href="") Кейсы
+						li: a.link(href="") Контакты
+					.btn.btn-lg.btn-primary.mt-4.d-lg-none Заказать
+		.header-block--right.d-flex.align-items-center.justify-content-between.position-relative
+			.btn.btn-primary.d-none.d-lg-block Заказать
+			.hamburger.hamburger--emphatic.d-lg-none
+				.hamburger-box
+					.hamburger-inner
