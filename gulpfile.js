@@ -93,7 +93,7 @@ gulp.task('styles:build', function() {
   .pipe(autoprefixer(['last 15 versions']))
   .pipe(postcss([ require('postcss-uncss')({
     html:   ['build/*.html'],
-    ignore: [,/^.*?\.fade.*?$/,/^.*?\.is-active.*?$/, /^.*?\.active.*?$/, /^.*?\.fixed.*?$/, /^.*?\.error.*?$/, /^.*?\.valid.*?$/, /^.*?\.has-focus.*?$/, /^.*?\.animated.*?$/],
+    ignore: [,/^.*?\.fade.*?$/,/^.*?\.is-active.*?$/, /^.*?\.active.*?$/, /^.*?\.fixed.*?$/, /^.*?\.error.*?$/, /^.*?\.valid.*?$/, /^.*?\.has-focus.*?$/, /^.*?\.animated.*?$/, /^.*?\.card.*?$/],
     })]))
   .pipe(webpcss(webpcssOptions))
   .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
