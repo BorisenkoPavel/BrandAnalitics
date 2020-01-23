@@ -56,7 +56,7 @@ $(document).ready(function () {
 		}
 });
 
-	$.ajax({url: "/webApi.json",})
+	$.ajax({url: "../webApi.json",})
 		.done(function(result){
 			if(result.status){
 				var htmlResult = "";
