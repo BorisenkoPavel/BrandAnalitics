@@ -1,7 +1,5 @@
 $(document).ready(function () {
 	
-	new WOW().init();
-
 	svg4everybody({});
 
 	Modernizr.on('webp', function(result) {
